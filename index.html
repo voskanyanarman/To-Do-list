@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <title>To Do List</title>
+</head>
+<body>
+
+    <div class="container text-left pt-5">
+        <div class="row justify-content-center text-center" id="liveAlertPlaceholder"></div>
+        
+        <div class="row justify-content-center">
+        <div class="col-10">
+        <h3 class="p" >Create a Task</h3>
+        <label for="text" class="form-label bold">Task Name</label>
+        <div class="input-group mb-3">
+            
+            <input type="text" class="form-control" placeholder="Example" aria-label="Username" aria-describedby="basic-addon1" id="text">
+            <button type="button" class="btn btn-success" disabled id="add">Add Task</button>
+        </div>
+        <hr>
+        <h3>Added Tasks</h3>
+        <table class="table table-striped table-bordered">
+        <thead id="table">
+            <tr class="table">
+                <th>Task name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+                <td>TASK</td>
+                <td><button type="button" class='btn btn-outline-primary close' data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal" >Delete</button></td>
+            </tr>
+        </tbody>
+          </table>
+        </div>
+    </div>
+    
+
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="yellow" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+              </svg>  Are you sure delete?</h1>
+            
+            </div>
+            <div class="modal-body">
+              This action can not be undone.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn " data-bs-dismiss="modal">No</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="yes">Yes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</body>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</html>
